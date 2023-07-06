@@ -1,10 +1,10 @@
 {
-  "name": "v-tracking",
+  "name": "vue-bury",
   "version": "1.0.1",
   "main": "index.js",
   "module": "index.js",
   "description": "基于Vue3埋点插件",
-  "keywords": ["v-tracking", "vue3", "埋点"],
+  "keywords": ["vue-bury", "vue3", "埋点"],
   "scripts": {
     "build": "vite build"
   },

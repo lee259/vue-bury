@@ -3,7 +3,7 @@ Vue3 前端埋点插件。主要功能有`PV&UV统计`、`用户页面时长统�
 ## 安装
 
 ```
-npm install v-tracking -S
+npm install v-vue-bury -S
 ```
 
 ## 在 main.js 中引入插件
@@ -12,10 +12,10 @@ npm install v-tracking -S
 import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router/index";
-import vTracking from "v-tracking";
+import vueBury from "v-vue-bury";
 const app = createApp(App);
 app.use(router);
-app.use(vTracking, Options);
+app.use(vueBury, Options);
 app.mount("#app");
 
 ```
@@ -45,7 +45,7 @@ PV&UV&TP 事件前缀，一般用于区分不同项目等（建议和普通事�
 ### Options 示例
 
 ```
-app.use(vTracking, {
+app.use(vueBury, {
   baseParams: {
     uid: 123
   },
@@ -127,7 +127,7 @@ time 则表示时长（ms）
 当你在`main.js`中无法获取公共数据的时候,你可以在获取到公共数据比如登录信息 uid 等的时候调用`manualInto`进行`Options`注入。**注意**: `Option.isVisTP`手动注入无效,需在`main.js`中传入是否开启
 
 ```
-import { manualInto } from 'v-tracking'
+import { manualInto } from 'v-vue-bury'
 /**
  * @param {*} options 同Options
  * @param {String | undefined} path 当前页面路由，不传手动注入则不会统计到当前页的UPV
@@ -144,4 +144,4 @@ manualInto({
 
 ## 地址
 
-[v-tracking](https://gitee.com/geeksdidi/vue-u-t/tree/master/packages/v-tracking)
+[v-vue-bury](https://github.com/lee259/vue-bury)
